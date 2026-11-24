@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starbots-kiro-credit-optimizer"
+version = "0.1.0"
+description = "Local budgets, explicit usage attribution, and portable Kiro optimization guidance."
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["kiro", "agent-skills", "credits", "budget", "cli"]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "Starbots"}]
+dependencies = []
+classifiers = ["Development Status :: 3 - Alpha", "Environment :: Console", "Operating System :: OS Independent", "Programming Language :: Python :: 3"]
+
+[project.scripts]
+starbots-kco = "starbots_kco.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Starbots-devv/kiro-credit-optimizer"
+Documentation = "https://github.com/Starbots-devv/kiro-credit-optimizer/tree/main/docs"
+Issues = "https://github.com/Starbots-devv/kiro-credit-optimizer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S603"]
+"scripts/*" = ["S603"]
+"examples/*" = ["S603"]

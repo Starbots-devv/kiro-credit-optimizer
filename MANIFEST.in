@@ -1,0 +1,9 @@
+include LICENSE NOTICE README.md SECURITY.md CONTRIBUTING.md .gitignore requirements-dev.txt kco.py
+recursive-include .kiro *.md
+recursive-include .kiro LICENSE NOTICE
+recursive-include .github *.yml
+recursive-include docs *.md
+recursive-include assets *.svg
+recursive-include examples *.py
+recursive-include scripts *.py
+recursive-include tests *.py
